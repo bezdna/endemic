@@ -1,28 +1,90 @@
 body {
-    background: #fafafa;
+    background: #222333 url('../images/bg_pattern.png') repeat;
+    background-attachment: fixed;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #333;
 }
-
-.hero-unit {
-    margin: 50px auto 0 auto;
-    width: 300px;
-    font-size: 18px;
-    font-weight: 200;
-    line-height: 30px;
-    background-color: #eee;
-    border-radius: 6px;
-    padding: 60px;
-    h1 {
-        font-size: 60px;
-        line-height: 1;
-        letter-spacing: -1px;
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+  }
+  .page {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    background-color: #212232;
+    border-right: 1px solid #1a1c27;
+    box-sizing: border-box;
+    max-width: 1400px;
+    position: relative;
+    margin-right: 40px;
+    &:before {
+        width: 1px;
+        height: 100%;
+        right: 0px;
+        content: ''; 
+        position: absolute;
+        background-color: #323343;
+    }
+    & > .wrap {
+        padding-bottom: 100px;
+        background-color: #212232;
+      }
+    .container {
+        background: #3c3d4b url('../images/endemic_pattern_1.jpg') 0 0 repeat;
+        margin: 0 7px 0 320px;
+    }
+    .sidebar {
+        width: 320px;
+        float: left;
+        height: 100%;
+        
+        text-align: center;
+    }
+  }
+.logo {
+    margin: 30px 0;
+    background: url('../images/logo.png') 0 0 no-repeat;
+    width: 256px;
+    height: 220px;
+    display: inline-block;
+    transition: all .75s ease-out;
+    &:hover {
+        transform:rotate3d(0, -2, 0, 180deg);
     }
 }
-
-.browsehappy {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
+.main_menu{
+    border-top: 1px solid #1a1b28;
+    border-bottom: 1px solid #383a49;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+        border-top: 1px solid #373948;
+        border-bottom: 1px solid #1f212e;
+        a {
+            display: block;
+            padding: 15px;
+            background-color: #272939;
+            color: #fff;
+            text-align: center;
+            text-transform: uppercase;
+            text-decoration: none;
+            
+            &:hover {
+                background-color: #202339;
+                text-shadow: 0px 1px 2px rgba(0,0,0,0.9);
+            }
+        }
+    }
 }
+  .footer {
+
+    height: 100px;
+    margin-top: -100px;
+    .wrap {
+        
+    }
+  }
