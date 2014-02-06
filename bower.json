@@ -1,5 +1,5 @@
 {
-  "name": "en",
+  "name": "endemic",
   "private": true,
   "dependencies": {
     "modernizr": "~2.6.2",
