@@ -39,14 +39,19 @@ p.bjqs-caption{display:block;width:96%;margin:0;padding:2%;position:absolute;bot
 			font-size: 0;
 			height: 20px;
 			&:before {
-				content: '♦';
+				content: '\2B25';
 				font-size: 20px;
-				line-height: 1;
+				line-height: 20px;
+				//transform-origin: 50% 50%;
+				//display: inline-block;
+				//width: 20px;
+				//height: 20px;
 				font-family: Arial, Helvetica, sans-serif;
 			}
 			&:hover {
-				transform: scale(2);
-				color: #f8a476;
+				transform: scale(2.3);
+				color: #f57936;
+				line-height: 20px;
 			}		
 		}
 	}
