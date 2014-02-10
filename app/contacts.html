@@ -99,11 +99,19 @@
 								</li>
 								<li>
 									<label for="message">Сообщение</label>
-									<input type="text" name="message" id="message">
+                                    <textarea rows="4" cols="45" name="message" id="message"></textarea>
 								</li>
 								<li>
 									<label for="file">Прикрепить файл</label>
-									<input type="file" name="file" id="file">
+                                    <div class="file-upload-container">
+                                        <div class="file-upload-override-button">
+                                            Обзор
+                                            <input type="file" class="file-upload-button" id="file-upload-button"/>
+                                        </div>
+                                        <div class="file-upload-filename" id="file-upload-filename">Файл не выбран</div>
+                                        <div class="both"></div>
+                                    </div>                                
+									<!-- <input type="file" name="file" id="file"> -->
 								</li>
 								<li class="last">
 									<label for="submit">Поля отмеченные <span class="required">*</span> являются необходимыми для заполнения</label>
@@ -164,6 +172,12 @@
         <!-- build:js({app,.tmp}) scripts/main.js -->        
         <script src="scripts/bjqs-1.3.js"></script>
         <script src="scripts/main.js"></script>
+        <script type="text/javascript">
+          $("#file-upload-button").change(function () {
+            var fileName = $(this).val().replace('C:\\fakepath\\', '');
+            $("#file-upload-filename").html(fileName);
+          });
+        </script>
         <!-- endbuild -->
 </body>
 </html>

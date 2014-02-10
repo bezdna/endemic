@@ -2,9 +2,10 @@
 	font-family: 'icomoon';
 	src:url('fonts/icomoon.eot?-yoe1zu');
 	src:url('fonts/icomoon.eot?#iefix-yoe1zu') format('embedded-opentype'),
+	url('fonts/icomoon.svg?-yoe1zu#icomoon') format('svg'),
 		url('fonts/icomoon.woff?-yoe1zu') format('woff'),
-		url('fonts/icomoon.ttf?-yoe1zu') format('truetype'),
-		url('fonts/icomoon.svg?-yoe1zu#icomoon') format('svg');
+		url('fonts/icomoon.ttf?-yoe1zu') format('truetype');
+		
 	font-weight: normal;
 	font-style: normal;
 }
@@ -94,4 +95,10 @@
 }
 .icon-tag:before {
 	content: "\e617";
+}
+.icon-email:before  {
+	content: "\0040";
+	font-family: 'Open Sans';
+	font-weight: 600;
+	vertical-align: text-top;
 }
