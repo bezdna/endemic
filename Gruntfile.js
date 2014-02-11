@@ -155,17 +155,28 @@ module.exports = function (grunt) {
                 httpImagesPath: '/images',
                 httpGeneratedImagesPath: '/images/generated',
                 httpFontsPath: '/styles/fonts',
-                relativeAssets: false,
-                assetCacheBuster: false
+                outputStyle: 'expanded'
+                // outputStyle: 'compact',
+                // outputStyle: 'nested',
+                // lineComments: false,
+                // relativeAssets: false,
+                // assetCacheBuster: false,
+                // debugInfo: false,
             },
             dist: {
                 options: {
-                    generatedImagesDir: '<%= yeoman.dist %>/images/generated'
+                    generatedImagesDir: '<%= yeoman.dist %>/images/generated',
+                    // outputStyle: 'compact',
+                    // debugInfo: false,
+                    // outputStyle: 'nested',
+                    lineComments: false,
+                    relativeAssets: false,
+                    assetCacheBuster: false                 
                 }
             },
             server: {
                 options: {
-                    debugInfo: true
+                    debugInfo: false
                 }
             }
         },
@@ -271,16 +282,16 @@ module.exports = function (grunt) {
         // By default, your `index.html`'s <!-- Usemin block --> will take care of
         // minification. These next options are pre-configured if you do not wish
         // to use the Usemin blocks.
-        // cssmin: {
-        //     dist: {
-        //         files: {
-        //             '<%= yeoman.dist %>/styles/main.css': [
-        //                 '.tmp/styles/{,*/}*.css',
-        //                 '<%= yeoman.app %>/styles/{,*/}*.css'
-        //             ]
-        //         }
-        //     }
-        // },
+        cssmin: {
+            dist: {
+                files: {
+                    '<%= yeoman.dist %>/styles/main.css': [
+                        '.tmp/styles/{,*/}*.css',
+                        '<%= yeoman.app %>/styles/{,*/}*.css'
+                    ]
+                }
+            }
+        },
         // uglify: {
         //     dist: {
         //         files: {
@@ -397,9 +408,9 @@ module.exports = function (grunt) {
         'uglify',
         'copy:dist',
         'modernizr',
-        //'rev',
+        // 'rev',
         'usemin',
-        'htmlmin'
+        // 'htmlmin'
     ]);
 
     grunt.registerTask('default', [

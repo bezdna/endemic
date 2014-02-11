@@ -9,4 +9,12 @@ jQuery(document).ready(function($) {
 		responsive      : true,
 		randomstart     : false,
 	});
+
+	(function($) {  
+		$(function() {  
+		  
+		  $('input, select').styler();  
+		  
+		})  
+	})(jQuery)
 });
