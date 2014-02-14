@@ -68,8 +68,9 @@ module.exports = function (grunt) {
 
                 port: 9031,
                 livereload: 35731,
-                // Change this to '0.0.0.0' to access the server from outside
-                hostname: 'localhost'
+                // Change this to '192.168.1.36' to access the server from outside
+                hostname: '192.168.1.36'
+                //hostname: 'localhost'
             },
             livereload: {
                 options: {
@@ -155,19 +156,19 @@ module.exports = function (grunt) {
                 httpImagesPath: '/images',
                 httpGeneratedImagesPath: '/images/generated',
                 httpFontsPath: '/styles/fonts',
-                outputStyle: 'expanded'
+                // outputStyle: 'expanded'
                 // outputStyle: 'compact',
-                // outputStyle: 'nested',
-                // lineComments: false,
-                // relativeAssets: false,
-                // assetCacheBuster: false,
-                // debugInfo: false,
+                outputStyle: 'nested',
+                lineComments: false,
+                relativeAssets: false,
+                assetCacheBuster: false,
+                debugInfo: false,
             },
             dist: {
                 options: {
                     generatedImagesDir: '<%= yeoman.dist %>/images/generated',
-                    // outputStyle: 'compact',
-                    // debugInfo: false,
+                    outputStyle: 'compact',
+                    debugInfo: false,
                     // outputStyle: 'nested',
                     lineComments: false,
                     relativeAssets: false,
