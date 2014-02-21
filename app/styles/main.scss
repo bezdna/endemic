@@ -455,8 +455,7 @@ a {
     }
 }
 
-.small_menu,
-.socials {
+.small_menu {
     margin: 0;
     position: absolute;
     top: 30px;
@@ -469,15 +468,14 @@ a {
         padding: 0 0 0 10px;
         a {
             text-decoration: none;
-            font-size: 28px;
-            color: #212232;
+            font-size: 24px;
+            color: #6e6f7e;
             transition: 0.3s ease-out all;
             &.i-email {
                 vertical-align: text-bottom;
             }
             &:hover {
                 color: #f8752e;
-                text-shadow: 0px 1px 2px rgba(0,0,0,0.8);
             }
             &.lang {
                 font-size: 38px;
@@ -487,10 +485,29 @@ a {
         }
     }
 }
-.socials {
-    top: 40px;
-    right: 40px;
+.socials {    
     z-index: 100;
+    li {
+        display: inline-block;
+        padding: 0 10px 0 0px;
+        a {
+            text-decoration: none;
+            font-size: 22px;
+            color: #6e6f7e;
+            transition: 0.3s ease-out all;
+            &.i-email {
+                vertical-align: text-bottom;
+            }
+            &:hover {
+                color: #f8752e;
+            }
+            &.lang {
+                font-size: 38px;
+                line-height: 28px;
+                letter-spacing: -3px;
+            }
+        }
+    }
 }
 .info-bloks {
     margin: 0;
@@ -551,7 +568,7 @@ a {
     & > li {
         padding: 0 0 0 40px;        
         overflow: hidden;
-        background-color: #fff;
+        // background-color: #fff;
         @include r(980px) {
             display: block;
             position: relative;
@@ -686,13 +703,12 @@ a {
         .img {
             min-width: 228px;
             order: 0;
-            margin-right: 40px;
-            // border: 1px solid #dbdbdb;
+            margin-right: 40px;            
         }
         .info_bloks__text {
             width: auto;
             position: relative;
-            top: 14px;
+            
             background: none;
             min-height: 0;
             height: auto;
