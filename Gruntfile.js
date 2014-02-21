@@ -66,8 +66,8 @@ module.exports = function (grunt) {
         connect: {
             options: {
 
-                port: 9031,
-                livereload: 35731,
+                port: 9033,
+                livereload: 35733,
                 // Change this to '192.168.1.36' to access the server from outside
                 hostname: '192.168.1.36'
                 //hostname: 'localhost'
@@ -169,7 +169,6 @@ module.exports = function (grunt) {
                     generatedImagesDir: '<%= yeoman.dist %>/images/generated',
                     outputStyle: 'compact',
                     debugInfo: false,
-                    // outputStyle: 'nested',
                     lineComments: false,
                     relativeAssets: false,
                     assetCacheBuster: false                 
@@ -405,7 +404,7 @@ module.exports = function (grunt) {
         'concurrent:dist',
         'autoprefixer',
         'concat',
-        'cssmin',
+        // 'cssmin',
         'uglify',
         'copy:dist',
         'modernizr',
