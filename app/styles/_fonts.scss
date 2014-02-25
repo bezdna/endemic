@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'icomoon';
-	src:url('fonts/icomoon.eot?2mr6xu');
-	src:url('fonts/icomoon.eot?#iefix2mr6xu') format('embedded-opentype'),
-		url('fonts/icomoon.woff?2mr6xu') format('woff'),
-		url('fonts/icomoon.ttf?2mr6xu') format('truetype'),
-		url('fonts/icomoon.svg?2mr6xu#icomoon') format('svg');
+	src:url('fonts/icomoon.eot?-kfm5x2');
+	src:url('fonts/icomoon.eot?#iefix-kfm5x2') format('embedded-opentype'),
+		url('fonts/icomoon.woff?-kfm5x2') format('woff'),
+		url('fonts/icomoon.ttf?-kfm5x2') format('truetype'),
+		url('fonts/icomoon.svg?-kfm5x2#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -21,39 +21,8 @@
 	/* Better Font Rendering =========== */
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	&:before {
-		vertical-align: bottom;	
-	}
 }
 
-.icon-uni65:before {
-	content: "\65";
-}
-.icon-uni6E:before {
-	content: "\6e";
-}
-.icon-uni72:before {
-	content: "\72";
-}
-.icon-uni75:before {
-	content: "\75";
-}
-.icon-en,
-.icon-ru {
-	width: 44px;
-	display: inline-block;
-	&:before {	
-		font-size: 1.6em;
-		line-height: 0.65;
-		letter-spacing: -1px;
-	}
-}
-.icon-en:before {
-	content: "en";
-}
-.icon-ru:before {
-	content: "ru";	
-}
 .icon-google-plus:before {
 	content: "\e600";
 }
@@ -78,3 +47,30 @@
 .icon-youtube:before {
 	content: "\e607";
 }
+.icon-ru:before {
+	content: "\e608";
+}
+.icon-en:before {
+	content: "\e609";
+}
+
+
+
+
+// .icon-en,
+// .icon-ru {
+// 	width: 44px;
+// 	display: inline-block;
+// 	&:before {	
+// 		font-size: 1.4em;
+// 		line-height: 0.7;
+// 		letter-spacing: -1px;
+// 	}
+// }
+// .icon-en:before {
+// 	content: "en";
+// }
+// .icon-ru:before {
+// 	content: "ru";	
+// }
+

@@ -196,43 +196,51 @@ a {
         }
         
     }
-    .sidebar {
-        width: $sidebar_w;
-        float: left;
-        height: 100%;
+    
+}
+.sidebar {
+    width: $sidebar_w;
+    float: left;
+    height: 100%;
+    text-align: center;
+    position: fixed;
+    background-color: #212232;
+    min-height: 100%;
+    @include r(980px) {
+        // position: static;
+        width: 260px;
+    }
+    @include r(min-height) {
+        // position: static;
+    }
+    .info {
+        position: absolute;
+        bottom: 0;
+        text-align: left;
+        padding: 10px 0;
+        color: #46474f;
+        font-size: 14px;
+        width: 100%;
         text-align: center;
-        position: fixed;
-        background-color: #212232;
-        min-height: 100%;
-        @include r(980px) {
-            // position: static;
-            width: 260px;
-        }
         @include r(min-height) {
-            // position: static;
+            position: static;
         }
-        .info {
-            position: absolute;
-            bottom: 0;
-            text-align: left;
-            padding: 10px;
-            color: #46474f;
-            font-size: 14px;
-            @include r(min-height) {
-                position: static;
-            }
-            p {
-                line-height: 1.2;    
-            }
+        p {
+            line-height: 1.2;
+            padding-left: 10px;
+            padding-right: 10px;    
             a {
                 color: #f8752e;
             }
         }
-        .copyright {
-            margin-bottom: 0;
-        }
+        
     }
-  }
+    .copyright {
+        margin-bottom: 0;
+        text-align: center;
+        padding: 0 10px;
+    }
+}
 .logo {
     margin: 30px 0;
     background: url('../images/logo.png') 0 0 no-repeat;
@@ -253,6 +261,7 @@ a {
     li {
         border-top: 1px solid #373948;
         border-bottom: 1px solid #1f212e;
+        font-size: 15px;
         &.active {
             a {
                 background-color: #f57936;
@@ -457,18 +466,16 @@ a {
 
 .small_menu {
     margin: 0;
-    position: absolute;
-    top: 30px;
-    right: 40px;
     list-style: none;
     z-index: 1;
     font-weight: 700;
+    padding: 0 10px 00px 00px;
     li {
         display: inline-block;
-        padding: 0 0 0 10px;
+        padding: 0 0 10px 10px;
         a {
             text-decoration: none;
-            font-size: 24px;
+            font-size: 20px;
             color: #6e6f7e;
             transition: 0.3s ease-out all;
             &.i-email {
@@ -476,11 +483,6 @@ a {
             }
             &:hover {
                 color: #f8752e;
-            }
-            &.lang {
-                font-size: 38px;
-                line-height: 28px;
-                letter-spacing: -3px;
             }
         }
     }
